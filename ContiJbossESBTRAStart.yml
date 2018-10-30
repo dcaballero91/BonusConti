@@ -1,8 +1,8 @@
 ---
-- hosts: JbossTest 
+- hosts: ContiJbossESBTRA
   remote_user: root
   tasks:
     - name: Start service jboss
       service:
-       name: jboss-as-standalone
+       name: jboss-eap-rhel
        state: started

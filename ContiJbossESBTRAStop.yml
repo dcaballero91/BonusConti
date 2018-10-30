@@ -1,0 +1,8 @@
+---
+- hosts: ContiJbossESBTRA
+  remote_user: root
+  tasks:
+    - name: Stop service jboss
+      service:
+       name: jboss-eap-rhel
+       state: stopped
