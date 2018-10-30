@@ -3,6 +3,4 @@
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-as-standalone
-       state: started
+      shell: /etc/init.d/jboss-as-standalone start
