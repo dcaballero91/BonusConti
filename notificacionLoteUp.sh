@@ -1,1 +1,0 @@
-curl --header "Content-type: application/json"  --request POST --data '{"telefonos": [{"nroTel": "0981186744"},{"nroTel": "0981497150"},{"nroTel": "0971782488"}], "texto": "Vision Banco Pagina Arriba"}'  http://10.118.1.25:8080/mensajeriaESB/http/mensajeria/sms/lote
