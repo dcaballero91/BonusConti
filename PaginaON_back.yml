@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Subiendo Pagina
+      shell: /etc/ansible/JbossTest/pag_mantenimiento_up.sh
+      register: command_result
+      ignore_errors: True
+    - debug: var=command_result
+
+    - name: Notificacion failed
+      fail:
+        shell:  /etc/ansible/JbossTest/errorTelegram.sh
+      when: "'No existe el fichero o el directorio' in command_result.stderr"
+
+    - name: Notificacion SMS-Telegram
+      fail:
+        shell: /etc/ansible/JbossTest/smsUP.sh
+      when: "'' in command_result.stderr"
+      

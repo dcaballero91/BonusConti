@@ -1,0 +1,12 @@
+---
+- hosts: localhost 
+  remote_user: root
+  tasks:
+    - name: uptime
+      shell: uptime
+    - debug:
+      msg: "Condicion de hora"
+      when: clock == "clock"
+    - debug:
+      msg: "No es condicion de hora"
+      when: clock != "clock"

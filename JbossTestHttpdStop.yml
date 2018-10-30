@@ -1,0 +1,13 @@
+---
+- hosts: ApacheTest 
+  remote_user: root
+  tasks:
+    - name: Stop service httpd
+    - service:
+      name: httpd
+      state: stopped
+ 
+    - name: Stop service httpd
+      shell: /etc/init.d/httpd24-httpd stop
+    - name: Verificar
+      shell: /etc/init.d/httpd24-httpd status

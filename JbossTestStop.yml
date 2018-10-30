@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: send a message
+      shell:  /etc/ansible/JbossTest/sms.sh
+    - name: Stop service jboss
+      service:
+       name: jboss-as-standalone
+       state: stopped
