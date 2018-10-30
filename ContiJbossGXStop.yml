@@ -1,0 +1,6 @@
+---
+- hosts: ContiJbossGX
+  remote_user: root
+  tasks:
+    - name: kill jboss
+      command: killall -9 java
