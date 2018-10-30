@@ -8,16 +8,22 @@
       shell: /etc/ansible/BonusConti/smsDOWN.sh
     - name: Notificacion SMS
       shell: /etc/ansible/BonusConti/notificacionLoteDown.sh
+- hosts: ContiJbossWeb
     - name: Bajando Jboss Web
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossWebStop.yml
+- hosts: ContiJbossTrans
     - name: Bajando Jboss Trans
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossTransStop.yml
+- hosts: ContiJbossGX
     - name: Bajando Jboss GX
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossGXStop.yml
+- hosts: ContiJbossBC
     - name: Bajando Jboss BC
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossBCStop.yml
+- hosts: ContiJbossArchivos
     - name: Bajando Jboss Archivos
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossArchivosStop.yml
+- hosts: ContiJbossESBTRA
     - name: Bajando Jboss ESBTRA
       shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossESBTRAStop.yml
    
