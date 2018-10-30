@@ -1,8 +1,8 @@
 ---
-- hosts: ContiJbossArchivos
+- hosts: ContiJbossTrans
   remote_user: root
   tasks:
-    - name: Stop service jboss
+    - name: Start service jboss
       service:
        name: jboss-as-standalone
-       state: stopped
+       state: started
