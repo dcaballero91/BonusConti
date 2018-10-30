@@ -1,0 +1,8 @@
+---
+- hosts: ContiJbossBC
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
