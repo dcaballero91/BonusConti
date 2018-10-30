@@ -3,9 +3,9 @@
   remote_user: root
   tasks:
     - name: Bajando Pagina
-      shell: /etc/ansible/JbossTest/pag_mantenimiento_down.sh 
+      shell: /etc/ansible/BonusConti/pag_mantenimiento_down.sh 
     - name: Notificacion Telegram 
-      shell: /etc/ansible/JbossTest/smsDOWN.sh
+      shell: /etc/ansible/BonusConti/smsDOWN.sh
     - name: Notificacion SMS
-      shell: /etc/ansible/JbossTest/notificacionLoteDown.sh
+      shell: /etc/ansible/BonusConti/notificacionLoteDown.sh
    
