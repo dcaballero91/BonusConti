@@ -8,22 +8,38 @@
       shell: /etc/ansible/BonusConti/smsDOWN.sh
     - name: Notificacion SMS
       shell: /etc/ansible/BonusConti/notificacionLoteDown.sh
+
 - hosts: ContiJbossWeb
+  tasks:
     - name: Bajando Jboss Web
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossWebStop.yml
+      service:
+       name: jboss-as-standalone
+       state: stopped
 - hosts: ContiJbossTrans
+  tasks:
     - name: Bajando Jboss Trans
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossTransStop.yml
+      service:
+       name: jboss-as-standalone
+       state: stopped
 - hosts: ContiJbossGX
+  tasks:
     - name: Bajando Jboss GX
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossGXStop.yml
+      command: killall -9 java
 - hosts: ContiJbossBC
+  tasks:
     - name: Bajando Jboss BC
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossBCStop.yml
+      service:
+       name: jboss-as-standalone
+       state: stopped
 - hosts: ContiJbossArchivos
+  tasks:
     - name: Bajando Jboss Archivos
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossArchivosStop.yml
+      service:
+       name: jboss-as-standalone
+       state: stopped
 - hosts: ContiJbossESBTRA
+  tasks:
     - name: Bajando Jboss ESBTRA
-      shell: ansible-playbook /etc/ansible/BonusConti/ContiJbossESBTRAStop.yml
-   
+      service:
+       name: jboss-eap-rhel
+       state: stopped 

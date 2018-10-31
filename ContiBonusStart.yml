@@ -1,0 +1,50 @@
+---
+- hosts: ContiJbossESBTRA
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-rhel
+       state: started
+- hosts: ContiJbossGX
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+- hosts: ContiJbossArchivos
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+- hosts: ContiJbossBC
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+- hosts: ContiJbossTrans
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+- hosts: ContiJbossWeb
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Subiendo Pagina
+      shell: /etc/ansible/BonusConti/pag_mantenimiento_up.sh
+    - name: Notificacion Telegram
+      shell: /etc/ansible/BonusConti/smsUP.sh
+    - name: Notificacino SMS
+      shell: /etc/ansible/BonusConti/notificacionLoteUp.sh
