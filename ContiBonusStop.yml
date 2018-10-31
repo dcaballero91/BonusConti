@@ -10,34 +10,40 @@
       shell: /etc/ansible/BonusConti/notificacionLoteDown.sh
 
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
     - name: Bajando Jboss Web
       service:
        name: jboss-as-standalone
        state: stopped
 - hosts: ContiJbossTrans
+  remote_user: root
   tasks:
     - name: Bajando Jboss Trans
       service:
        name: jboss-as-standalone
        state: stopped
 - hosts: ContiJbossGX
+  remote_user: root
   tasks:
     - name: Bajando Jboss GX
       command: killall -9 java
 - hosts: ContiJbossBC
+  remote_user: root
   tasks:
     - name: Bajando Jboss BC
       service:
        name: jboss-as-standalone
        state: stopped
 - hosts: ContiJbossArchivos
+  remote_user: root
   tasks:
     - name: Bajando Jboss Archivos
       service:
        name: jboss-as-standalone
        state: stopped
 - hosts: ContiJbossESBTRA
+  remote_user: root
   tasks:
     - name: Bajando Jboss ESBTRA
       service:
