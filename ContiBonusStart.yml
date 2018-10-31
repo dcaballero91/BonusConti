@@ -3,42 +3,38 @@
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-eap-rhel
-       state: started
+      shell: /etc/init.d/jboss-eap-rhel start
+      ignore_errors: True
 - hosts: ContiJbossGX
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
 - hosts: ContiJbossArchivos
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-as-standalone
-       state: started
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
 - hosts: ContiJbossBC
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-as-standalone
-       state: started
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
 - hosts: ContiJbossTrans
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-as-standalone
-       state: started
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
 - hosts: ContiJbossWeb
   remote_user: root
   tasks:
     - name: Start service jboss
-      service:
-       name: jboss-as-standalone
-       state: started
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
 - hosts: localhost
   remote_user: root
   tasks:
