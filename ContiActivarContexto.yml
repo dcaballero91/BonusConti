@@ -1,31 +1,36 @@
 ---
 - hosts: ContiJbossGX
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.106
-    command: "curl http://10.23.1.106:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
-
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.106
+      command: curl http://10.23.1.106:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossGX
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.111
-    command: "curl http://10.23.1.111:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.111
+      command: curl http://10.23.1.111:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
-    command: "curl http://10.23.1.136:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
+      command: curl http://10.23.1.136:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
-    command: "curl http://10.23.1.136:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
+      command: curl http://10.23.1.136:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 
 - hosts: ContiJbossTrans
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.22
-    command: "curl http://10.23.1.22:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.22
+      command: curl http://10.23.1.22:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 
 - hosts: ContiJbossTrans
+  remote_user: root
   tasks:
-  - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.24
-    command: "curl http://10.23.1.24:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}"
+    - name: Habilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.24
+      command: curl http://10.23.1.24:6666/mc?Cmd=ENABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 
