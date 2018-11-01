@@ -1,25 +1,31 @@
 ---
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
 - hosts: ContiJbossWeb
+  remote_user: root
   tasks:
   - name: Deshabilitar el contexto de los JbossWeb Conti en el Apache 10.23.1.136
     command: curl http://10.23.1.136:6666/mc?Cmd=DISABLE-APP&Range=NODE&JVMRoute={{ ansible_hostname }}
